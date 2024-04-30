@@ -7,6 +7,8 @@ const Person = require('./models/Person.js');
 const Menu = require('./models/Menu.js');
 const PersonRouter = require('./routes/PersonRoutes.js');
 const MenuRouter = require('./routes/MenuRoutes.js');
+require('dotenv').config();
+
 
 
 
@@ -28,6 +30,6 @@ app.get('/data',(req,res)=>{
 })
 
 
+const Port = process.env.Port||3000
 
-
-app.listen(8000,()=>console.log("Server is active ",node))
+app.listen(Port,()=>console.log("Server is active ",node))

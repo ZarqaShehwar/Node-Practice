@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-//localHost s not wirte we use its IP address instead of localHost 
-const mongoDbUrl = 'mongodb://127.0.0.1:27017/hotels';
+require('dotenv').config();
 
+//localHost s not wirte we use its IP address instead of localHost 
+// const mongoDbUrl = 'mongodb://127.0.0.1:27017/hotels';
+const mongoDbUrl = process.env.DBUrl;
 
 mongoose.connect(mongoDbUrl,{
     useNewUrlParser:true,
